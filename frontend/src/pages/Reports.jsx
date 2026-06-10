@@ -29,7 +29,7 @@ const Reports = () => {
 
   useEffect(() => { fetchReport(); }, []);
 
-  const fmt = (n) => `RWF ${Number(n || 0).toLocaleString()}`;
+  const fmt = (n) => `${Number(n || 0).toLocaleString()} RWF`;
 
   const grandTotal = report?.deptTotals?.reduce((s, d) => s + d.TotalNetSalary, 0) || 0;
 
